@@ -1,24 +1,21 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import ProductPage from './pages/ProductPage';
 
 function App() {
+  const baseUrl = import.meta.env.BASE_URL;
+
   return (
-    <Router basename="/react-store-website">
-      <div className="app-container">
-        <Navbar />
-        
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            
-            <Route path="/product/:sku" element={<ProductPage />} />
-            
-            <Route path="*" element={<Home />} />
-          </Routes>
-        </main>
-      </div>
+    <Router basename={baseUrl}>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          
+          <Route path="/products/:sku" element={<ProductPage />} />          
+          
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </main>
     </Router>
   );
 }

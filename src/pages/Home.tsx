@@ -20,8 +20,8 @@ const Home = () => {
       <div className={styles.grid}>
         {products.map((product) => (
           <Link to={`/products/${product.sku}`} key={product.sku} className={styles.card}>
-            <img src={`/images/${product.image}`} alt={product.name} />
-            <h3>{product.name}</h3>
+          <img src={`${import.meta.env.BASE_URL}${product.image}`} alt={product.name} />            
+          <h3>{product.name}</h3>
             <p>${product.price}</p>
           </Link>
         ))}
