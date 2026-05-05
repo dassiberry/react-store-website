@@ -24,8 +24,8 @@ const ProductPage = () => {
       <div className={styles.details}>
         <Link to="/">← Back</Link>
         <img src={`${import.meta.env.BASE_URL}images/${product.image}`} alt={product.name} />
-        <h2>{product.name}</h2>
-        <p>Price: ${product.price}</p>
+        <h2 className={styles.h2}>{product.name} </h2>
+        <p className={styles.price}>Price: ${product.price}</p>
         <p>{product.description}</p>
       </div>
     </div>

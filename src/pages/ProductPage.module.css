@@ -1,9 +1,25 @@
+.h2 {
+  text-align: center;
+  font-size: 36px;
+  padding: 10px;
+  color:rgb(235, 95, 223);
+}
+
+.price {
+  text-align: center;
+  font-size: 24px;
+  padding: 10px;
+  color:rgb(40, 191, 236);
+}
+
 .details {
+  font-size: 20px;
   padding: 20px;
   max-width: 600px;
   margin: auto;
   text-align: center;
+  color:rgb(40, 191, 236)
 }
 .details img { 
-    width: 300px; 
+    width: 500px; 
 }

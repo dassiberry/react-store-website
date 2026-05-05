@@ -17,6 +17,7 @@ const Home = () => {
   return (
     <div>
       <Navbar />
+      <h1 className={styles.h1}>Stationery Central!</h1>
       <div className={styles.grid}>
         {products.map((product) => (
           <Link to={`/products/${product.sku}`} key={product.sku} className={styles.card}>
