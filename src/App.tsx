@@ -1,15 +1,24 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import ProductPage from './pages/ProductPage';
 
-// Main App component that sets up routing for application 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products/:id" element={<ProductPage />} />
-      </Routes>
+    <Router basename="/react-store-website">
+      <div className="app-container">
+        <Navbar />
+        
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            
+            <Route path="/product/:sku" element={<ProductPage />} />
+            
+            <Route path="*" element={<Home />} />
+          </Routes>
+        </main>
+      </div>
     </Router>
   );
 }
