@@ -23,7 +23,7 @@ const ProductPage = () => {
       <Navbar />
       <div className={styles.details}>
         <Link to="/">← Back</Link>
-        <img src={`${import.meta.env.BASE_URL}${product.image}`} alt={product.name} />
+        <img src={`${import.meta.env.BASE_URL}images/${product.image}`} alt={product.name} />
         <h2>{product.name}</h2>
         <p>Price: ${product.price}</p>
         <p>{product.description}</p>
