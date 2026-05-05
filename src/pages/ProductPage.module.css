@@ -1,0 +1,9 @@
+.details {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+.details img { 
+    width: 300px; 
+}
